@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rat Love</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+    <body>
+  
+        <div id="container">
+            <div id="flex">
+                <main>
+                
+                   <!--comic images go here--> 
+                   <div class="background1"> 
+                      <img class="background1" src="https://hgbradley.neocities.org/assets/rlbg1short.PNG">
+                   </div>
+                   <div class="background2">
+                      <img class="background2" src="https://hgbradley.neocities.org/assets/rlbg2medium.jpg">
+                      <div class="panels"> 
+                      <img class="panels" src="https://hgbradley.neocities.org/assets/rlsubwaypanels.PNG">
+                      <img class="slidingrat" src="https://hgbradley.neocities.org/assets/rlslidingrat.PNG">
+                      </div>
+                   </div>
+                     <img class="skyscrapers" src="https://hgbradley.neocities.org/assets/Rlskyscrapersshort(1).PNG">
+                      <img class="buildings" src="https://hgbradley.neocities.org/assets/rlbrickbuildings.PNG">
+                      <img class="fence" src="https://hgbradley.neocities.org/assets/rlfence.PNG"> 
+                      <img class="clotheslines" src="https://hgbradley.neocities.org/assets/rlwires.PNG">
+                      <img class="midground" src="https://hgbradley.neocities.org/assets/rljunkyardmg.PNG">
+                      <img class="bottles" src="https://hgbradley.neocities.org/assets/rljunkyardfg.PNG">
+                  <div class="subwaybg"> 
+                      <img class="subwaybg" src="https://hgbradley.neocities.org/assets/subwaybg.PNG">
+                      <img class="subwaylight" src="https://hgbradley.neocities.org/assets/subwaylight.GIF">
+                      <img class="train" src="https://hgbradley.neocities.org/assets/subwaytrain.png">
+                      <img class="subwaymg" src="https://hgbradley.neocities.org/assets/subwaymg.PNG">
+                  </div> 
+                  <div class="platform">
+                      <img class="platform" src="https://hgbradley.neocities.org/assets/rlplatformblock.PNG">
+                      <img class="blinkies" src="https://hgbradley.neocities.org/assets/rlblinkies.GIF">
+                  </div>
+                  <div class="trackbg1">
+                      <img class="trackbg1" src="https://hgbradley.neocities.org/assets/rltrackbg1.PNG">
+                      <img class="jump" src="https://hgbradley.neocities.org/assets/rljumping(1).PNG">
+                  </div>
+                  <div class="tracks"> 
+                      <img class="tracks" src="https://hgbradley.neocities.org/assets/tracksbg.PNG">
+                      <img class="headlights" src="https://hgbradley.neocities.org/assets/headlights.PNG">
+                      <img class="headlightL" src="https://hgbradley.neocities.org/assets/headlightL.PNG">
+                      <img class="headlightR" src="https://hgbradley.neocities.org/assets/headlightR.PNG"> 
+                  </div> 
+                  <div class="void"> 
+                      <img class="void" src="https://hgbradley.neocities.org/assets/rlvoidbglong.PNG">
+                      <img class="ratlovereal" src="https://hgbradley.neocities.org/assets/ratlovereal.PNG">
+                  </div> 
+                </main>
+            </div>
+        </div>
+        
+        
+        <!-- THIS IS THE CSS !-->
+        <style>
+            /* user styles */
+
+            :root {
+                --header-image: url();
+                --body-bg-image: url();
+
+                /* colors */
+                --content: black;
+            }
+         
+            body {
+                margin: 0 auto;
+                background-color: black;
+                overflow-y: auto;
+                overflow-x: hidden;
+                /* you can delete the line below if you'd prefer to not use an image */
+                color: black;
+                background-image: var(--body-bg-image);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* below this line is CSS for the layout */
+
+
+            /* the "container" is what wraps your entire website */
+            /* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+            #container {
+                max-width: 100%;
+                max-height: 100%;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                /* this centers the entire page */
+            }
+
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #ED64F5;
+                font-weight: bold;
+                /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+            }
+
+            .flex {
+                display: flex;
+                flex-direction: column
+                justify-content: flex-start;
+                margin: 0 auto
+            }
+            /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+            aside {
+                background-color: #241445;
+                width: 0px;
+                padding: 0px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+    between the sidebars! */
+            main {
+                background-color: black;
+                flex: 1;
+                padding: 0px;
+                order: 2;
+                justify-content: flex-start;
+                margin: 0 auto
+            }
+
+            /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+
+            h1,
+            h2,
+            h3 {
+                color: #ED64F5;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #ED64F5;
+            }
+
+
+            /*MY IMAGE CLASSES BELLOW*/
+               /*BACKGROUNDS*/
+            .background1 {
+              display: block
+              position: relative;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 1
+            }
+            .background2 {
+              position: relative;
+              width: 600px;
+              margin: 0 auto;
+            }
+             .subwaybg {
+              position: relative;
+              width: 600px;
+              margin: 0 auto;
+            }
+             .platform {
+              position: relative;
+              width: 600px;
+              margin: 0 auto;
+            }
+             .trackbg1 {
+              position: relative;
+              width: 600px;
+              margin: 0 auto;
+            }
+             .tracks {
+              position: relative;
+              width: 600px;
+              margin: 0 auto;
+            }
+             .void {
+              position: relative;
+              width: 600px;
+              margin: 0 auto;
+            }
+            
+               /*MOVING ELEMENTS*/
+            .clotheslines {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 2
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:310px;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+            .skyscrapers {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 2
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:300px;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+            .buildings {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 2
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:550px;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+            .fence {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 2
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:800px;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+            .panels {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 2
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:0;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+              .midground {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 3
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:1110px;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+              .bottles {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 4
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:1150px;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+             .train {
+              position: absolute;
+              width: 1500px;
+              margin: 0 auto;
+              z-index: 4
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:100px;
+              right:0;
+              bottom:0;
+              left:-800px;
+            }
+             .slidingrat{
+              position: absolute;
+              width: 150px;
+              margin: 0 auto;
+              z-index: 3;
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top: 290px;
+              right: 0;
+              bottom:0;
+              left: -800px;
+            }
+            
+             .subwaymg {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 3;
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:0;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+              .subwaylight {
+              position: absolute;
+              width: 600px;
+              opacity: 20%;
+              margin: 0 auto;
+              z-index: ;
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:0;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+             .blinkies {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 4
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:0;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+              .jump {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 4
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:-1300px;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+              .headlights {
+              position: absolute;
+              width: 600px;
+              margin: 0 auto;
+              z-index: 5
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:0;
+              right:0;
+              bottom:0;
+              left:0;
+            }
+              .headlightL {
+              position: absolute;
+              width: 100px;
+              margin: 0 auto;
+              z-index: 5;
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              opacity: 50%;
+              top:150px;
+              right:250px;
+              bottom:0;
+              left:0;
+            }
+             .headlightR {
+              position: absolute;
+              width: 100px;
+              margin: 0 auto;
+              z-index: 5;
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              opacity: 50%;
+              top:130px;
+              right:0;
+              bottom:0;
+              left:270px;
+            }
+              .ratlovereal {
+              position: absolute;
+              width: 800px;
+              margin: 0 auto;
+              z-index: 5;
+              background-position: bottom center;
+              background-size: cover;
+              background-repeat: repeat-x;
+              position: absolute;
+              top:-150px;
+              right:0;
+              bottom:0;
+              left:-100px;
+            }
+            
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 450px) {
+                #container {
+                  width: 100%;
+                }
+                #flex {
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    margin: 0 auto
+                }
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+        </style>
+  
+  
+  <!--JAVASCRIPT-->
+<script src="https://hgbradley.neocities.org/gsap-public/gsap-public/minified/gsap.min.js">
+</script>
+
+<script src="https://hgbradley.neocities.org/gsap-public/gsap-public/minified/ScrollTrigger.min.js">
+</script>
+
+<script>
+ document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+  //gsap code here
+      gsap.to(".clotheslines", {
+        scrollTrigger: {
+        trigger:".clotheslines",
+        scrub: true,
+      },
+      y: -2000,
+      duration: 5
+      }); 
+      
+       gsap.to(".skyscrapers", {
+        scrollTrigger: {
+        trigger:".skyscrapers",
+        scrub: true,
+      },
+      y: -600,
+      duration: 5
+      }); 
+      
+        gsap.to(".buildings", {
+        scrollTrigger: {
+        trigger:".buildings",
+        scrub: true,
+      },
+      y: -1600,
+      duration: 2
+      }); 
+      
+        gsap.to(".fence", {
+        scrollTrigger: {
+        trigger:".fence",
+        scrub: true,
+      },
+      y: -2500,
+      duration: 5
+      }); 
+      
+      
+        gsap.to(".midground", {
+        scrollTrigger: {
+        trigger:".midground",
+        scrub: true,
+      },
+      y: -3000,
+      duration: 5
+      }); 
+      
+        gsap.to(".bottles", {
+        scrollTrigger: {
+        trigger:".bottles",
+        scrub: true,
+      },
+      y: -3800,
+      duration: 5
+      }); 
+  
+        gsap.to(".panels", {
+        scrollTrigger: {
+        trigger:".panels",
+        scrub: true,
+      },
+      y: 200,
+      duration: 5
+      }); 
+      
+       gsap.to(".slidingrat", {
+        scrollTrigger: {
+        trigger: ".panels",
+        scrub: true,
+        markers: true
+      },
+      duration: 3,
+      y: 600,
+      x: 600
+      }); 
+      
+      gsap.to(".train", {
+        scrollTrigger: {
+        trigger:".subwaybg",
+        scrub: true,
+        markers: true,
+        pin: true
+      },
+      x: 1500,
+      duration: 5
+      }); 
+      
+        gsap.to(".jump", {
+        scrollTrigger: {
+        trigger:".trackbg1",
+        scrub: true,
+        markers: true,
+      },
+      y: 1200,
+      duration: 5
+      }); 
+      
+      const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".tracks",
+    scrub: true,
+    markers: true
+ }
+}); 
+  
+tl.to(".headlightL", {scale: 1, duration: 1 })
+  .to(".headlightL", {scale: 7, duration: 1 })
+  .to(".headlightL", {scale: 1, duration: 1 })
+
+
+      const tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".tracks",
+    scrub: true,
+    markers: true
+ }
+}); 
+  
+tl2.to(".headlightR", {scale: 1, duration: 1 })
+  .to(".headlightR", {scale: 7, duration: 1 })
+  .to(".headlightR", {scale: 1, duration: 1 })
+
+      
+      
+       gsap.to(".ratlovereal", {
+        scrollTrigger: {
+        trigger:".ratlovereal",
+        scrub: true,
+        markers: true,
+      },
+      rotation: 360,
+      y: 500,
+      duration: 5
+      }); 
+      
+ });
+</script>
+
+
+  </body>
+</html>
+ 
